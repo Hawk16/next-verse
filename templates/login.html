@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Log in | next verse</title>
+        <link rel="stylesheet" href="/assets/style.css">
+    </head>
+    <body class="welcome-page">
+        <img class="welcome-photo" src="/assets/welcome-photo.png"
+             width="765" height="705"
+             alt="Two people reviewing documents together while an older adult joins by video call.">
+        <div class="container login-container">
+            <main>
+                <img class="welcome-logo" src="/assets/next-verse.png" alt="Next Verse">
+                <div class="welcome-actions">
+                    <h1>Welcome to your next verse</h1>
+                    <p class="visually-hidden">Your finances. Shared support. Your choice.</p>
+                    <form action="/" method="post" class="login-form">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                        <div class="welcome-buttons">
+                            <button type="submit" name="action" value="login">Log in</button>
+                            <button type="submit" name="action" value="get-started">Get Started</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
